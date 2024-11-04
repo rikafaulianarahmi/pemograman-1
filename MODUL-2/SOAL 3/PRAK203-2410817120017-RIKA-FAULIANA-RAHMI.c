@@ -1,28 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, i, j, x, y;
-    float hasil;
+    float a, b, i, j, x, y;
 
-    // Input dari user
-    printf("Masukkan a: ");
-    scanf("%d", &a);
-    printf("Masukkan b: ");
-    scanf("%d", &b);
-    printf("Masukkan i: ");
-    scanf("%d", &i);
-    printf("Masukkan j: ");
-    scanf("%d", &j);
-    printf("Masukkan x: ");
-    scanf("%d", &x);
-    printf("Masukkan y: ");
-    scanf("%d", &y);
+    // Membaca input dari pengguna
+    scanf("%f %f %f %f %f %f", &a, &b, &i, &j, &x, &y);
 
-    // Menghitung hasil dengan urutan operasi yang benar
-    hasil = (((float)(a - b) * i) / j) - (float)x - (float)y;
+    // Melakukan perhitungan
+    float hasil = (((a - b) * i) / j) - (x + y);
 
-    // Menampilkan hasil dengan ketelitian 3 angka di belakang koma
-    printf("Hasil: %.3f\n", hasil);
+    // Menampilkan hasil dengan format 3 desimal
+    printf("%.3f\n", hasil);
 
     return 0;
 }
